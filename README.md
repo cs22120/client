@@ -1,6 +1,6 @@
 client
 ======
-12345678901234567890123456789012345678901234567890123456789012345678901234567890
+
 This repository holds the code (*et cetera*) to do with the Android client
 application.
 
