@@ -1,0 +1,107 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newPOIScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CreateNewPOIActivity" >
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    
+    <EditText
+        android:id="@+id/newPOIDescEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newPOIDescTextView"
+        android:layout_marginTop="15dp"
+        android:ems="6"
+        android:hint="@string/newPOIDescHint"
+        android:inputType="textPersonName"
+        android:textColor="@color/light_gray" />
+
+    <EditText
+        android:id="@+id/newPOINameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newPOINameTextView"
+        android:layout_marginTop="14dp"
+        android:ems="6"
+        android:hint="@string/newPOINameHint"
+        android:inputType="textPersonName"
+        android:textColor="@color/light_gray" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/newPOIDescTextView"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newPOINameTextView"
+        android:layout_below="@+id/newPOINameEditText"
+        android:layout_marginTop="20dp"
+        android:text="@string/newPOIDescTextLabel"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/newPOIHeader"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/newPOIHeaderText"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/newPOINameTextView"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newPOIHeader"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/newPOINameTextLabel"
+        android:textColor="@color/light_gray" />
+
+    <ImageButton
+        android:id="@+id/newPOIHelpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newPOINameTextView"
+        android:layout_alignTop="@+id/newPOIHeader"
+        android:background="@color/black"
+        android:contentDescription="@string/helpIconAltText"
+        android:src="@drawable/help" />
+    
+     <Button
+        android:id="@+id/newPOIAddPhotoButton"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newPOIDescEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/newPOIaddPhotoButtonText"
+        android:textColor="@color/light_gray" />
+
+    <Button
+        android:id="@+id/newPOICreateButton"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/newPOIAddPhotoButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/newPOICreateButtonText"
+        android:textColor="@color/light_gray" />
+    
+	</RelativeLayout>
+</ScrollView>
