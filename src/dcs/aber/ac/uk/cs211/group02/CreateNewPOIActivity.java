@@ -8,12 +8,14 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class CreateNewPOIActivity extends Activity {
 
 	private Context context;
 	private ImageButton helpButton;
+	private Button createButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class CreateNewPOIActivity extends Activity {
 		setContentView(R.layout.activity_create_new_poi);
 		context = this;
 		addOnClickListeners();
+
 	}
 
 
@@ -41,11 +44,23 @@ public class CreateNewPOIActivity extends Activity {
 
 		});
 
+
+		createButton = (Button) findViewById(R.id.newPOICreateButton);
+
+		createButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				addPointOfInterest(55.12, -3.892);
+
+			}
+
+		});
+
+
+
 	}
-
-
-
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,12 +71,12 @@ public class CreateNewPOIActivity extends Activity {
 
 	public String getWPOINameText() {
 
-		return "DEFAULT VALUE";
+		return "hard coded name";
 	}
 
 	public String getPOIDescText() {
 
-		return "DEFAULT VALUE";
+		return "hard coded description";
 	}
 
 	public Image getPOIImageFromDevice() {
@@ -69,9 +84,18 @@ public class CreateNewPOIActivity extends Activity {
 		return null;
 	}
 
-	public PointOfInterest addPointOfInterest(){
+	public void addPointOfInterest(double lat, double lng){
 
-		return null;
+
+		PointOfInterest p = new PointOfInterest(getWPOINameText(),getPOIDescText(), lat	, lng);
+
+		Intent resultIntent = new Intent();
+		resultIntent.putExtra("POIObject", p);
+		setResult(RESULT_OK, resultIntent);
+		finish();
+
 	}
+
+
 
 }

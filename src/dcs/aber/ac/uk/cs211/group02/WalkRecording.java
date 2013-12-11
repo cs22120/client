@@ -14,25 +14,46 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class WalkRecording extends FragmentActivity {
+
+	private static String walkName, walkSDesc, walkLdesc;
+
 
 	private GoogleMap map;
 	private Context context;
 	private Button newPOIButton, uploadButton;
 	private ImageButton helpButton;
-	private Vector<PointOfInterest> pois;
+	private static Vector<PointOfInterest> pois = new Vector<PointOfInterest>();
+
+	private CreateNewPOIActivity POIAct;
+
+	private final static int NEW_POI_REQ = 0;
+	private final static int EDIT_WALK_DETAILS = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_walk_recording);
 		context = this;
+
+		Bundle bundle = getIntent().getBundleExtra("Walk info");
+
+		if(bundle != null){
+
+			this.walkName = bundle.getString("walkTitle");
+			this.walkSDesc = bundle.getString("walkSdesc");
+			this.walkLdesc = bundle.getString("walkLDesc");
+
+		}
+
+
 		map=((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.mapView)).getMap();
 
 		map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-		pois = new Vector<PointOfInterest>();
+		POIAct = new CreateNewPOIActivity();
 
 		addOnClickListeners();
 	}
@@ -62,7 +83,7 @@ public class WalkRecording extends FragmentActivity {
 			public void onClick(View v) {
 
 				Intent intent = new Intent(context, CreateNewPOIActivity.class);
-				startActivity(intent);   
+				startActivityForResult(intent, NEW_POI_REQ);   
 
 			}
 
@@ -76,6 +97,9 @@ public class WalkRecording extends FragmentActivity {
 			public void onClick(View v){
 
 				Intent intent = new Intent(context, ConfrimUploadActivity.class);
+				Bundle b = new Bundle();
+
+
 				startActivity(intent);
 			}
 		});
@@ -89,12 +113,10 @@ public class WalkRecording extends FragmentActivity {
 		return true;
 	}
 
-	public void addNewPointOfInterest() {
-
-
-	}
 
 	public void uploadTosever() {
+
+
 
 
 	}
@@ -113,6 +135,63 @@ public class WalkRecording extends FragmentActivity {
 
 		return 0;
 
+	}
+
+
+	public static Vector<PointOfInterest> getPois() {
+		return pois;
+	}
+
+	protected void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		if(requestCode == NEW_POI_REQ){
+			if( resultCode == RESULT_OK ) {
+				PointOfInterest p = data.getExtras().getParcelable("POIObject");
+				Toast lol = Toast.makeText(context, p.getName(), Toast.LENGTH_LONG);
+				lol.show();
+				pois.add(p);
+				Toast x = Toast.makeText(context, "POIS SIZE " + pois.size() , Toast.LENGTH_LONG);
+				x.show();
+
+			}
+		}
+		else if(requestCode == EDIT_WALK_DETAILS){
+			if( resultCode == RESULT_OK ) {
+				
+				
+
+			}
+
+		}
+	}
+
+	public static String getWalkName() {
+		return walkName;
+	}
+
+
+	public static void setWalkName(String walkName) {
+		WalkRecording.walkName = walkName;
+	}
+
+
+	public static String getWalkSDesc() {
+		return walkSDesc;
+	}
+
+
+	public static void setWalkSDesc(String walkSDesc) {
+		WalkRecording.walkSDesc = walkSDesc;
+	}
+
+
+	public static String getWalkLdesc() {
+		return walkLdesc;
+	}
+
+
+	public static void setWalkLdesc(String walkLdesc) {
+		WalkRecording.walkLdesc = walkLdesc;
 	}
 
 }

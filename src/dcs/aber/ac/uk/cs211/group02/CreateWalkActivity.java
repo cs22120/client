@@ -37,6 +37,13 @@ public class CreateWalkActivity extends Activity {
 			public void onClick(View v){
 
 				Intent intent = new Intent(context, WalkRecording.class);
+				Bundle b = new Bundle();
+
+				b.putString("walkTitle", getWalkTitleText());
+				b.putString("walkSDesc", getWalkShortDescText());
+				b.putString("walkLDesc", getWalkLongDescText());
+				intent.putExtra("Walk info", b);
+
 				startActivity(intent);
 			}
 
@@ -73,7 +80,7 @@ public class CreateWalkActivity extends Activity {
 		return "DEFAULT VALUE";
 	}
 
-	public String getWalkLongDescext() {
+	public String getWalkLongDescText() {
 
 		return "DEFAULT VALUE";
 	}
