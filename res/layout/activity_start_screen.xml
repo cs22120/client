@@ -58,7 +58,7 @@
         android:layout_marginBottom="46dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:text="@string/startHelpInformationText"
         android:textColor="@color/light_gray" />
 
@@ -82,8 +82,5 @@
         android:layout_marginBottom="45dp"
         android:text="@string/startCreateButtonText"
         android:textColor="@color/light_gray" />
-    
-    
-    
 
 </RelativeLayout>

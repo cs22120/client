@@ -8,7 +8,9 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class CreateWalkActivity extends Activity {
 
@@ -18,13 +20,24 @@ public class CreateWalkActivity extends Activity {
 
 	private ImageButton helpButton;
 
+	private EditText nameEditText, shortEditText, longEditText;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_create_walk);
 		context = this;
+		setEditTexts();
 		addListenerOnButtons();
+
+	}
+
+	public void setEditTexts() {
+
+		nameEditText = (EditText) findViewById(R.id.createWalkNameEditText);
+		shortEditText = (EditText) findViewById(R.id.createWalkShortDescEditText);
+		longEditText = (EditText) findViewById(R.id.createWalkLongDescEditText);
 
 	}
 
@@ -38,7 +51,6 @@ public class CreateWalkActivity extends Activity {
 
 				Intent intent = new Intent(context, WalkRecording.class);
 				Bundle b = new Bundle();
-
 				b.putString("walkTitle", getWalkTitleText());
 				b.putString("walkSDesc", getWalkShortDescText());
 				b.putString("walkLDesc", getWalkLongDescText());
@@ -72,16 +84,16 @@ public class CreateWalkActivity extends Activity {
 
 	public String getWalkTitleText() {
 
-		return "DEFAULT VALUE";
+		return nameEditText.getText().toString();
 	}
 
 	public String getWalkShortDescText() {
 
-		return "DEFAULT VALUE";
+		return shortEditText.getText().toString();
 	}
 
 	public String getWalkLongDescText() {
 
-		return "DEFAULT VALUE";
+		return longEditText.getText().toString();
 	}
 }
