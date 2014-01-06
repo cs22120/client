@@ -43,12 +43,25 @@ public class ConfrimUploadActivity extends Activity {
 	private Context context;
 	private ImageButton helpButton;
 	private Button confirmButton, cancelButton;
+	private String result = "", walkName, walkSDesc, walkLdesc;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_confrim_upload);
-		context=this;
+		context = this;
+		Bundle bundle = this.getIntent().getExtras();
+
+		if(bundle != null){
+
+			walkName = bundle.getString("walk name");
+			walkSDesc = bundle.getString("walk short");
+			walkLdesc = bundle.getString("walk long");
+
+		}
+
+
 		addOnClickListeners();
 	}
 
@@ -77,6 +90,20 @@ public class ConfrimUploadActivity extends Activity {
 			public void onClick(View v){
 				EvaluateUserAction();
 			}
+		});
+
+		cancelButton = (Button) findViewById(R.id.confrimUploadCancelButton);
+		cancelButton.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v){
+
+				Intent intent = new Intent(context, ServerResponse.class);
+				intent.putExtra("response", result);
+				startActivity(intent);
+
+			}
+
 		});
 
 
@@ -119,7 +146,7 @@ public class ConfrimUploadActivity extends Activity {
 				location.put("longitude",pois.get(i).getLongitude());
 				descriptions.put(pois.get(i).getDescription());
 
-				images.put("image1");
+				images.put(pois.get(i).getImagePath());
 				images.put("image2");
 
 				location.put("images", images);
@@ -131,18 +158,12 @@ public class ConfrimUploadActivity extends Activity {
 			}
 
 			walk.put("locations", points);
-			walk.put("title", "test walk title");
-			walk.put("shortDesc", "test short desc");
-			walk.put("longDesc", "test long desc");
+			walk.put("title", walkName);
+			walk.put("shortDesc", walkSDesc);
+			walk.put("longDesc", walkLdesc);
 
 			parent.put("walk", walk);
 			parent.put("authorization", auth);
-
-
-
-
-
-
 
 			UploadASyncTask upload = new UploadASyncTask();
 			upload.execute(parent);
@@ -187,7 +208,7 @@ public class ConfrimUploadActivity extends Activity {
 
 				HttpClient httpclient = new DefaultHttpClient(params);
 
-				HttpPost httpPost = new HttpPost("http://project.chippy.ch/upload.php");
+				HttpPost httpPost = new HttpPost("http://users.aber.ac.uk/thk11/chris/server/upload.php");
 
 				List<NameValuePair> postParams = new ArrayList<NameValuePair>();
 				postParams.add(new BasicNameValuePair("data", json[0].toString()));
@@ -201,7 +222,7 @@ public class ConfrimUploadActivity extends Activity {
 				HttpResponse httpResponse = httpclient.execute(httpPost);
 
 				InputStream inputStream = httpResponse.getEntity().getContent();
-				String result = "";
+
 
 				if(inputStream != null){
 					result = convertInputStreamToString(inputStream);

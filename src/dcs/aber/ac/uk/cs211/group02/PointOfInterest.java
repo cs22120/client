@@ -1,5 +1,7 @@
 package dcs.aber.ac.uk.cs211.group02;
 
+import java.io.File;
+
 import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -10,8 +12,7 @@ public class PointOfInterest implements Parcelable {
 	private String name, description;
 	private double longitude, lattitude;
 
-	private Image image;
-
+	private File image;
 
 
 	public PointOfInterest(String name, String description, double longitude, double lattitude) {
@@ -28,10 +29,17 @@ public class PointOfInterest implements Parcelable {
 		description = in.readString();
 		longitude = in.readDouble();
 		lattitude = in.readDouble();
+		image = new File(in.readString());
+
 
 	}
 
-	public void addImage(Image im){
+	public String getImagePath(){
+
+		return image.toString();
+	}
+
+	public void addImage(File im){
 
 		this.image = im;
 	}
@@ -57,6 +65,7 @@ public class PointOfInterest implements Parcelable {
 		dest.writeString(description);
 		dest.writeDouble(longitude);
 		dest.writeDouble(lattitude);
+		dest.writeString(image.toString());
 	}
 
 	public static final Parcelable.Creator<PointOfInterest> CREATOR
@@ -85,6 +94,11 @@ public class PointOfInterest implements Parcelable {
 
 	public double getLattitude() {
 		return lattitude;
+	}
+
+	public File getImage(){
+
+		return image;
 	}
 
 

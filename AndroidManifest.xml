@@ -26,6 +26,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
@@ -40,7 +41,8 @@
 
         <activity
             android:name="dcs.aber.ac.uk.cs211.group02.StartScreen"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,31 +51,45 @@
         </activity>
         <activity
             android:name="dcs.aber.ac.uk.cs211.group02.CreateWalkActivity"
-            android:label="@string/title_activity_create_walk" >
+            android:label="@string/title_activity_create_walk"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="dcs.aber.ac.uk.cs211.group02.HelpScreen"
-            android:label="@string/title_activity_help_screen" >
+            android:label="@string/title_activity_help_screen"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="dcs.aber.ac.uk.cs211.group02.WalkRecording"
-            android:label="@string/title_activity_walk_recording" >
+            android:label="@string/title_activity_walk_recording"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="dcs.aber.ac.uk.cs211.group02.CreateNewPOIActivity"
-            android:label="@string/title_activity_create_new_poi" >
+            android:label="@string/title_activity_create_new_poi"
+            android:screenOrientation="landscape" >
         </activity>
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBKYpKfU4zn-3IBkskKsLbwRsQ1-IqFldk" />
+            android:value="AIzaSyBriHozWKei0lNm0XP2SR3hz8GW790L1eA" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <activity
             android:name="dcs.aber.ac.uk.cs211.group02.ConfrimUploadActivity"
-            android:label="@string/title_activity_confrim_upload" >
+            android:label="@string/title_activity_confrim_upload"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.ServerResponse"
+            android:label="@string/title_activity_server_response"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.EditWalksInfoActivity"
+            android:label="@string/title_activity_edit_walks_info" >
         </activity>
     </application>
 
