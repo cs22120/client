@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ConfrimUploadActivity" >
+
+    <ImageButton
+        android:id="@+id/confirmUploadIHelpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        android:contentDescription="@string/helpIconAltText"
+        android:src="@drawable/help" />
+
+    <TextView
+        android:id="@+id/confirmUploadWalkTitleValueTextView"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmUploadWalkTitleLabelTextView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/confirmUploadWalkDescValueTextView"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmUploadWalkDescLabelTextView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/confirmUploadHeaderTextView"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/confirmUploadIHelpButton"
+        android:layout_centerHorizontal="true"
+        android:text="@string/confirmUploadHeaderText"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/confirmUploadWalkTitleLabelTextView"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/confirmUploadWalkTitleValueTextView"
+        android:layout_below="@+id/confirmUploadHeaderTextView"
+        android:layout_marginTop="16dp"
+        android:text="@string/confirmUploadTitleLabelTextViewText"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/confirmUploadWalkDescLabelTextView"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/confirmUploadWalkTitleValueTextView"
+        android:layout_below="@+id/confirmUploadWalkTitleValueTextView"
+        android:layout_marginTop="15dp"
+        android:text="@string/confirmUploadDescLabelTextViewText"
+        android:textColor="@color/light_gray" />
+
+    <Button
+        android:id="@+id/confrimUploadConfirmButton"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmUploadWalkDescValueTextView"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/confirmUploadConfirmButtonText"
+        android:textColor="@color/light_gray" />
+
+</RelativeLayout>
