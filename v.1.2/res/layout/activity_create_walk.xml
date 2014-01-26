@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CreateWalkActivity" >
+
+    <RelativeLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/serverResponseTextField"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkHeaderText"
+            android:textColor="@color/light_gray" />
+
+        <EditText
+            android:id="@+id/createWalkNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createWalkTitleTextView"
+            android:layout_marginTop="15dp"
+            android:ems="6"
+            android:hint="@string/createWalkNameHint"
+            android:inputType="textPersonName"
+            android:textColor="@color/light_gray" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/createWalkShortDescEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createWalkShortDescTextView"
+            android:layout_marginTop="15dp"
+            android:ems="6"
+            android:hint="@string/createWalkShortDescHint"
+            android:inputType="text"
+            android:maxLength="100"
+            android:textColor="@color/light_gray" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/createWalkLongDescEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createWalkLongDescTextView"
+            android:layout_marginTop="15dp"
+            android:ems="6"
+            android:hint="@string/createWalkLongDescHint"
+            android:inputType="textMultiLine"
+            android:maxLength="1000"
+            android:textColor="@color/light_gray" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/createWalkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createWalkLongDescEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkButtonText"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/createWalkShortDescTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/createWalkNameEditText"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkShortDescTextView"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/createWalkTitleTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/createWalkShortDescTextView"
+            android:layout_below="@+id/serverResponseTextField"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkTitleTextView"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/createWalkLongDescTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/createWalkShortDescTextView"
+            android:layout_below="@+id/createWalkShortDescEditText"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkLongDescTextView"
+            android:textColor="@color/light_gray" />
+
+        <ImageButton
+            android:id="@+id/createWalkHelpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/createWalkTitleTextView"
+            android:layout_alignTop="@+id/serverResponseTextField"
+            android:background="@color/black"
+            android:contentDescription="@string/helpIconAltText"
+            android:src="@drawable/help" />
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- start of general strings -->
+
+    <string name="app_name">Walking Tours</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_create_walk">Walking Tours</string>
+    <string name="helpIconAltText">Help icon</string>
+
+    <!-- end of general -->
+
+
+    <!-- start of StartScreen strings -->
+    <string name="startCreateButtonText">Create new walk</string>
+    <string name="startEditButtonText">Edit existing walk</string>
+    <string name="logoText">Logo</string>
+    <!-- end of StartScreen strings -->
+
+
+    <!-- start of CreateWalk screen strings -->
+
+    <string name="startScreenWelcome">Welcome to the Walking Tours application!</string>
+    <string name="startScreenInstruction">Please select an option:</string>
+    <string name="createWalkHeaderText">Create a new Walk</string>
+    <string name="createWalkTitleTextView">Enter Walk\'s name:</string>
+    <string name="createWalkNameHint">e.g. \"Aber uni\"</string>
+    <string name="createWalkShortDescTextView">Eneter a short description</string>
+    <string name="createWalkShortDescHint">e.g. \"A quick look at aber uni\"</string>
+    <string name="createWalkLongDescTextView">Enter a long desciption</string>
+    <string name="createWalkButtonText">Record Walk</string>
+    <string name="createWalkLongDescHint">\" Summarise the walk in detail \"</string>
+
+    <!-- end of CreateWalk strings -->
+
+
+    <!-- start of color declarations -->
+    <color name="black">#000000</color>
+    <color name="light_gray">#cccccc</color>
+    <color name="transparent">#00000000</color>
+    <!-- end of color declarations -->
+
+
+    <!-- start of help screen -->
+
+    <string name="startHelpInformationText">Click this icon at anytime will bring up the help menus</string>
+    <string name="title_activity_help_screen">Help</string>
+    <string name="helpScreenTitleTextView">Help</string>
+
+    <!-- end of help screen -->
+    <string name="prevButton">Previous</string>
+    <string name="nextButton">Next</string>
+    <string name="returnButton">Return</string>
+    <string name="title_activity_walk_recording">WalkRecording</string>
+    <string name="title_activity_create_new_poi">CreateNewPOIActivity</string>
+
+    <!-- walk recording screen -->
+    <string name="walkRecordingNewPOIButtonText">New POI</string>
+    <string name="walkRecordingUploadButtonText">Upload</string>
+    <string name="walkRecordingEditInfoButtonText">Edit walk</string>
+
+    <!-- end of walkr recording screen -->
+
+
+    <!-- new POI screen -->
+
+    <string name="newPOINameHint">\"tower bridge\"</string>
+    <string name="newPOINameTextLabel">Enter name</string>
+    <string name="newPOIDescTextLabel">Enter Desctiption</string>
+    <string name="newPOIDescHint">\" Cool House near the sea \"</string>
+    <string name="newPOIHeaderText">Create a new POI</string>
+    <string name="newPOICreateButtonText">Create</string>
+    <string name="newPOIaddPhotoButtonText">Add Image</string>
+
+    <!-- end of POI screen -->
+
+
+    <!-- confirm screen -->
+
+    <string name="title_activity_confrim_upload">ConfrimUploadActivity</string>
+    <string name="confirmUploadTitleLabelTextViewText">Walk Ttitle\:</string>
+    <string name="confirmUploadDescLabelTextViewText">Walk Description\:</string>
+    <string name="confirmUploadHeaderText">Upload Walk</string>
+    <string name="confirmUploadCancelButtonText">Cancel</string>
+    <string name="confirmUploadConfirmButtonText">Confirm</string>
+
+    <!-- end of confrim screen -->
+
+    <string name="title_activity_cancel_upload_activty">CancelUploadActivty</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_edit_walks_info">EditWalksInfoActivity</string>
+    <string name="title_activity_server_response">ServerResponse</string>
+    <string name="editWalkInfoHeaderText">Edit walks information</string>
+    <string name="updateWalkInfoButtonText"> Update info</string>
+
+</resources>
