@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="../../google-play-services_lib/libs/google-play-services.jar:../../google-play-services_lib/bin/google-play-services_lib.jar:../../sdk/extras/android/support/v13/android-support-v13.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="dcs.aber.ac.uk.cs211.group02,dcs.aber.ac.uk.cs211.group02.tests,com.google.android.gms" source="1.6" sourcepath="src:gen" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
