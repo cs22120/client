@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dcs.aber.ac.uk.cs211.group02"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="22" />
+
+    <permission
+        android:name="dcs.aber.ac.uk.cs211.group02.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- Accessing camera hardware -->
+    <!-- putting android.hardware.camera prevents non-camera devices using this app -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="dcs.aber.ac.uk.cs211.group02.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <instrumentation
+            android:name="android.test.InstrumentationTestRunner"
+            android:label="your tests label"
+            android:targetPackage="dcs.aber.ac.uk.cs211.group02" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher"
+        android:theme="@style/AppTheme" >
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+        <uses-library android:name="android.test.runner" />
+
+        
+
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.StartScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.CreateWalkActivity"
+            android:label="@string/title_activity_create_walk"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.HelpScreen"
+            android:label="@string/title_activity_help_screen"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.WalkRecording"
+            android:label="@string/title_activity_walk_recording"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.CreateNewPOIActivity"
+            android:label="@string/title_activity_create_new_poi"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBriHozWKei0lNm0XP2SR3hz8GW790L1eA" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.ConfrimUploadActivity"
+            android:label="@string/title_activity_confrim_upload"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.ServerResponse"
+            android:label="@string/title_activity_server_response"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="dcs.aber.ac.uk.cs211.group02.EditWalksInfoActivity"
+            android:label="@string/title_activity_edit_walks_info" >
+        </activity>
+    </application>
+
+</manifest>

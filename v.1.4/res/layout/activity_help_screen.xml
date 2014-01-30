@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".HelpScreen" >
+
+    <TextView
+        android:id="@+id/helpTitleTextView"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/helpScreenTitleTextView"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/helpScreenInformationTextView"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/helpTitleTextView"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/light_gray" />
+
+    <Button
+        android:id="@+id/helpPrevious"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/helpNext"
+        android:layout_toRightOf="@+id/helpReturn"
+        android:text="@string/prevButton"
+        android:textColor="@color/light_gray" />
+
+    <Button
+        android:id="@+id/helpReturn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/helpNext"
+        android:layout_alignBottom="@+id/helpNext"
+        android:layout_centerHorizontal="true"
+        android:text="@string/returnButton"
+        android:textColor="@color/light_gray" />
+
+    <Button
+        android:id="@+id/helpNext"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp"
+        android:layout_toLeftOf="@+id/helpReturn"
+        android:text="@string/nextButton"
+        android:textColor="@color/light_gray" />
+
+</RelativeLayout>
