@@ -1,0 +1,121 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".EditWalksInfoActivity" >
+
+    <RelativeLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editWalkNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editWalkTitleTextView"
+            android:layout_marginTop="15dp"
+            android:ems="6"
+            android:inputType="textPersonName"
+            android:textColor="@color/light_gray" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editWalkShortDescEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editWalkShortDescTextView"
+            android:layout_marginTop="15dp"
+            android:ems="6"
+            android:inputType="text"
+            android:textColor="@color/light_gray" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editWalkLongDescEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editWalkLongDescTextView"
+            android:layout_marginTop="15dp"
+            android:ems="6"
+            android:inputType="textMultiLine"
+            android:textColor="@color/light_gray" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/updateWalkInfoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editWalkLongDescEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/updateWalkInfoButtonText"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/editWalkShortDescTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editWalkNameEditText"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkShortDescTextView"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/editWalkTitleTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editWalkShortDescTextView"
+            android:layout_below="@+id/editWalkInfoHeaderTextView"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkTitleTextView"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/editWalkLongDescTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editWalkShortDescTextView"
+            android:layout_below="@+id/editWalkShortDescEditText"
+            android:layout_marginTop="15dp"
+            android:text="@string/createWalkLongDescTextView"
+            android:textColor="@color/light_gray" />
+
+        <ImageButton
+            android:id="@+id/editWalkHelpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editWalkTitleTextView"
+            android:layout_alignTop="@+id/editWalkInfoHeaderTextView"
+            android:background="@color/black"
+            android:contentDescription="@string/helpIconAltText"
+            android:src="@drawable/help" />
+
+        <TextView
+            android:id="@+id/editWalkInfoHeaderTextView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/editWalkHelpButton"
+            android:text="@string/editWalkInfoHeaderText"
+            android:textColor="@color/light_gray" />
+    </RelativeLayout>
+
+</ScrollView>

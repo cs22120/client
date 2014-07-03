@@ -1,0 +1,82 @@
+            Version 1.4 - Final version to present
+=======================================================================
+
+Allows:
+
+- view the helps screen at any point and return to the previous
+  Activity
+- user to a valid name to a walk
+- user to give walk a valid short description 
+- user to give walk a valid long description 
+- user to view thier location on the GoogleMap
+- user to edit the walks info at any point in time
+- add one or many points of the interest to the map
+- attach an image from camera/gallery to these points of interest
+- add a valid name to the points of interest
+- add a valid description to the points of interest
+- record the time of the walk in hh:mm:ss format
+- view a points information by clicking the corresponding marker
+- delete a walk and all its information
+- track the devices GPS using NETWORK_SERVICES
+- review the walk at the upload screen
+- choose to upload the walk to the server (hosted on users.aber.ac.uk)
+
+- All functions requirements met (based on the WalkingTours 2013-2014 
+  specification as part of the CS22120 Module
+
+=========================================================================
+
+Known bugs to date:
+
+- 30/01/14
+	- if the uses presses the back button on the upload screen the wak 
+           will be deleted.
+        - the TextView which displays the help information is not centered
+
+==========================================================================
+
+Authors:
+
+ - Chris Edwards
+     - che16@aber.ac.uk
+
+  - Group02
+    - CS22120 - 2013-2014 Group Project Walking Tour recorder.
+
+===========================================================================
+
+Project
+
+   -tutor
+   	- Dr. Lynda Thomas (Aberyswyth University)
+
+   - Group Leader
+        - James Woodside
+
+   -Deputy Leader
+	- Dillion Cuffe
+
+   -Website Application lead developers
+	- Douglas Gardner       
+	- Luke Horwood
+
+   -Android lead developer
+	- Chris Edwards
+
+   -Quality Assurance
+	- Ben Rainbow
+	- Ashley Smith
+
+   -Testing 
+       -White Box testing (Android (JUnit))
+       	   -Chris Edwards
+
+       -Black Box testing
+	   - James Woodside
+           - Jostein Kristiansen
+       
+==========================================================================
+
+
+       
+   

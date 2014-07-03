@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startScreenRelLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".StartScreen" >
+
+    <TextView
+        android:id="@+id/startScreenInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startCreateWalkButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="@string/startScreenInstruction"
+        android:textColor="@color/light_gray" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startScreenInstruction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:adjustViewBounds="false"
+        android:background="@color/black"
+        android:contentDescription="@string/logoText"
+        android:src="@drawable/logo" />
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/startScreenWelcome"
+        android:background="@color/black"
+        android:contentDescription="@string/helpIconAltText"
+        android:src="@drawable/help" />
+
+    <TextView
+        android:id="@+id/startScreenWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/helpButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="@string/startScreenWelcome"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/startHelpTextInformationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="46dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="@string/startHelpInformationText"
+        android:textColor="@color/light_gray" />
+
+    <ImageView
+        android:id="@+id/startBottomOfScreenHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startHelpTextInformationTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="@string/helpIconAltText"
+        android:src="@drawable/help" />
+
+    <Button
+        android:id="@+id/startCreateWalkButton"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/startBottomOfScreenHelp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:text="@string/startCreateButtonText"
+        android:textColor="@color/light_gray" />
+
+</RelativeLayout>
